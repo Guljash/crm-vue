@@ -10,6 +10,7 @@ import "firebase/auth";
 import "firebase/database";
 import Loader from '@/components/app/Loader.vue';
 import tooltipDirective from "./directives/tooltip.directive";
+import Paginate from './components/Paginate'
 
 const firebaseConfig = {
   apiKey: "AIzaSyAQOfBFQyOYkTVJu9PSc7vEiv3eLOX8V2U",
@@ -29,6 +30,13 @@ firebase.default.initializeApp(firebaseConfig);
 
 firebase.default.auth().onAuthStateChanged(() => {
   if (!app) {
-    createApp(App).use(store).use(router).use(messagePlugin).directive('tooltip', tooltipDirective).component('Loader', Loader).mount("#app");
+    createApp(App)
+    .use(store)
+    .use(router)
+    .use(messagePlugin)
+    .directive('tooltip', tooltipDirective)
+    .component('Loader', Loader)
+    .component('Paginate', Paginate)
+    .mount("#app");
   }
 })

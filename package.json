@@ -10,11 +10,14 @@
   "dependencies": {
     "@vuelidate/core": "^2.0.0-alpha.24",
     "@vuelidate/validators": "^2.0.0-alpha.21",
+    "chart.js": "^2.8.0",
     "core-js": "^3.6.5",
     "firebase": "^8.10.0",
     "firebase-admin": "^9.11.1",
+    "lodash": "^4.17.21",
     "register-service-worker": "^1.7.1",
     "vue": "^3.0.0",
+    "vue-chartjs": "^3.4.2",
     "vue-router": "^4.0.0-0",
     "vuelidate": "^0.7.6",
     "vuex": "^4.0.0-0"
